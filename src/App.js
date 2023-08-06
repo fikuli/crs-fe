@@ -5,8 +5,8 @@ function App() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    console.log(process.env.REACT_APP_CRS_BE_PATH_1)
-    axios.get(process.env.REACT_APP_CRS_BE_PATH_1)
+    //console.log(process.env.REACT_APP_CRS_BE_PATH_1)
+    axios.get('https://crs-2.azurewebsites.net/counter')
       .then(response => {
         setPosts(response.data);
       })
@@ -17,7 +17,7 @@ function App() {
 
   return (
     <ul>
-      <p>deneme</p>
+      <p>header gibi olsun</p>
       {posts}
     </ul>
   );
